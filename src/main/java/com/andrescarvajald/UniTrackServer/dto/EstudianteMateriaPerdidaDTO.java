@@ -26,7 +26,6 @@ public class EstudianteMateriaPerdidaDTO {
 
     public EstudianteMateriaPerdidaDTO(int estudianteId, Long cedula, String jornada, String estado, String estudianteNombre, String estudianteApellido, int semestreNivel, String materiaNombre, Long vecesPerdida) {
         this.estudianteId = estudianteId;
-        // TODO CHANGE CEDULA TYPE TO LONG
         this.cedula = cedula;
         this.estudianteNombre = estudianteNombre;
         this.estudianteApellido = estudianteApellido;
