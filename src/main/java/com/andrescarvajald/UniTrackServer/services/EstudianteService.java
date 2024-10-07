@@ -37,4 +37,8 @@ public class EstudianteService implements Crud<Estudiante> {
     public void delete(Estudiante estudiante) {
         estudianteRepository.delete(estudiante);
     }
+
+    public Estudiante getByCedula(Long cedula) {
+        return estudianteRepository.findByCedula(cedula);
+    }
 }

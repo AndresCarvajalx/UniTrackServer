@@ -1,6 +1,5 @@
 package com.andrescarvajald.UniTrackServer.services;
 
-import com.andrescarvajald.UniTrackServer.entities.Estudiante;
 import com.andrescarvajald.UniTrackServer.entities.Materia;
 import com.andrescarvajald.UniTrackServer.repositories.MateriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +32,9 @@ public class MateriaService implements Crud<Materia> {
     @Override
     public void delete(Materia materia) {
         materiaRepository.delete(materia);
+    }
+
+    public Materia getByName(String name) {
+        return materiaRepository.getByNombre(name);
     }
 }

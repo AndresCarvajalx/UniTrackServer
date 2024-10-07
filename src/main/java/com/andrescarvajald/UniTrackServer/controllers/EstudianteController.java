@@ -18,6 +18,11 @@ public class EstudianteController {
         return estudianteService.getAll();
     }
 
+    @GetMapping("{cedula}")
+    public Estudiante getEstudianteByCedula(@PathVariable Long cedula) {
+        return estudianteService.getByCedula(cedula);
+    }
+
     @PostMapping
     Estudiante addEstudiante(@RequestBody Estudiante estudiante) {
         return estudianteService.create(estudiante);

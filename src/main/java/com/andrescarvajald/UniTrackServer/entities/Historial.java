@@ -10,15 +10,15 @@ public class Historial {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "estudiante_id", nullable = false)
+    @JoinColumn(name = "estudiante_id")
     private Estudiante estudiante;
 
     @ManyToOne
-    @JoinColumn(name = "semestre_id", nullable = false)
+    @JoinColumn(name = "semestre_id")
     private Semestre semestre;
 
     @ManyToOne
-    @JoinColumn(name = "materia_id", nullable = false)
+    @JoinColumn(name = "materia_id")
     private Materia materia;
 
     @Column //(name = "nota_materia")

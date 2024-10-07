@@ -23,7 +23,7 @@ public interface HistorialRepository extends JpaRepository<Historial, Integer> {
             "JOIN h.estudiante e " +
             "JOIN h.materia m " +
             "JOIN h.semestre s " +
-            "WHERE h.estadoMateria = 'PERDIDA' " +
+            "WHERE h.estadoMateria = 'No Aprobado' " +
             "GROUP BY e.id, m.nombre " +
             "ORDER BY e.id, m.nombre")
     List<EstudianteMateriaPerdidaDTO> findEstudiantesLosingSubjects();

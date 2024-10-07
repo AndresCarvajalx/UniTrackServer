@@ -5,6 +5,8 @@ import com.andrescarvajald.UniTrackServer.services.MateriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @RequestMapping("api/materias/")
@@ -16,6 +18,13 @@ public class MateriaController {
     @GetMapping
     public List<Materia> getAll() {
         return materiaService.getAll();
+    }
+
+    @GetMapping("{name}")
+    public Materia getByName(@PathVariable String name) {
+        String decodedName = name.replace("-", " ");
+        System.out.println("MATERIA NAME: " + decodedName);
+        return materiaService.getByName(decodedName);
     }
 
     @PostMapping
